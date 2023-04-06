@@ -1,0 +1,11 @@
+npm i nodemon express mysql2
+npm i prisma @prisma/client
+
+mkdir prisma
+cd prisma 
+touch schema.prisma
+
+npx prisma generate
+npx prisma migrate dev --name init --create-only
+
+npx prisma migrate deploy
